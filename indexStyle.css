@@ -3,11 +3,11 @@
     src: url("fonts/walkWay.ttf");
     }
 #fancyBox{
-    position: absolute;
+    
     z-index:0;
     top:0;
     background-color:rgb(20, 27, 34);
-    border-bottom:40px solid black;
+
 }
 
 body{
@@ -64,7 +64,7 @@ nav{
 /*---About---*/
 
 #about{
-margin-top:800px;
+
 padding-top:10px;
 }
 #about>h1{font-size:2.5em;}
