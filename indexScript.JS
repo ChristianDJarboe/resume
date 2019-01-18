@@ -15,7 +15,7 @@ var dotArray = [];             //Where the particles will be stored
 var angle = .03;
 var centerPoint =[800,500];
 
-var mousePos;
+var mousePos =1;
 //End Variables
 canvas.addEventListener('mousemove', function(evt){
     mousePos = getMousePos(canvas,evt);
@@ -59,7 +59,7 @@ function getMousePos(canvas, evt){
 }
 function changeColor(i){
     var distance = Math.abs(mousePos.x - dotArray[i].x);
-    console.log(distance);
+    
     if(distance<70){
         dotArray[i].color ="rgb(50,200,200)";
     } else {

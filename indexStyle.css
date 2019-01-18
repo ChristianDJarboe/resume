@@ -3,11 +3,8 @@
     src: url("fonts/walkWay.ttf");
     }
 #fancyBox{
-    
-    z-index:0;
     top:0;
     background-color:rgb(20, 27, 34);
-
 }
 
 body{
@@ -20,7 +17,6 @@ body>div{
     background-color:rgb(36, 44, 54);
 }
 h1{
-    
     width:60%;
     text-align: center;
     margin:0 auto;
@@ -37,6 +33,7 @@ h1{
     position: absolute;
     width:510px;    
     transition: left ease-in-out .3s;
+
    }
 /*---Navigation bar---*/
 nav{
