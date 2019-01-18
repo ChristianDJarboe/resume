@@ -15,7 +15,15 @@ var dotArray = [];             //Where the particles will be stored
 var angle = .03;
 var centerPoint =[800,500];
 
+var mousePos;
 //End Variables
+canvas.addEventListener('mousemove', function(evt){
+    mousePos = getMousePos(canvas,evt);
+
+})
+
+
+
 
 //------------------------------------------------------
 class dot{
@@ -23,7 +31,7 @@ class dot{
         this.x = Math.random()*1920;
     
         this.y= Math.random()*height;
-        console.log(this.y);
+        this.color ="gray";
     }
     
 }
@@ -42,6 +50,22 @@ function rotate(cx, cy, x, y, angle) {
         ny = (cos * (y - cy)) - (sin * (x - cx)) + cy;
     return [nx, ny];
 }
+function getMousePos(canvas, evt){
+    var rect = canvas.getBoundingClientRect();
+    return{
+        x: evt.clientX - rect.left,
+        y: evt.clientY - rect.top
+    };
+}
+function changeColor(i){
+    var distance = Math.abs(mousePos.x - dotArray[i].x);
+    console.log(distance);
+    if(distance<70){
+        dotArray[i].color ="rgb(50,200,200)";
+    } else {
+        dotArray[i].color ="gray";
+    }
+}
 
 function drawDot(i){
     var temp = dotArray[i];
@@ -50,7 +74,7 @@ function drawDot(i){
     ctx.fill();
 }
 function drawLine(i){
-    ctx.strokeStyle ="gray";
+    ctx.strokeStyle =dotArray[i].color;
     var temp = dotArray[i];
     ctx.moveTo(temp.x,temp.y);
     ctx.lineTo(temp.x+150,temp.y-2000);
@@ -65,14 +89,18 @@ function updateWidth(){
 
 window.setInterval(function(){
     updateWidth();
+    
     ctx.clearRect(0,0,width,height);
     for(let i =0;i<dotCount;i++){
+        changeColor(i);
         drawDot(i);
         drawLine(i);
         var np = rotate(centerPoint[0],centerPoint[1],dotArray[i].x, dotArray[i].y,angle);
         dotArray[i].x = np[0];
         dotArray[i].y = np[1];
+
     }
+
   }, 10);
 
 
