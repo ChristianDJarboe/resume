@@ -11,19 +11,37 @@
         <canvas id="fancyBox">
                 
         </canvas>
-        <nav>
-            <a href="#about">
-                <h3>About Me!</h3>
-            </a>
-            <a href="#projects">
-                <h3>Projects</h3>
-            </a>
-            <a href="#skills">
-                <h3>Skills</h3>
-            </a>
-            <a href="#contact">
-                <h3>Contact</h3>
-            </a>
+        <canvas id="secondFancyBox"></canvas>
+        <nav class ="mobile">
+                   <!--Only used in mobile view-->
+                   <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">&#9776</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#about">
+                            <h3>About Me!</h3>
+                        </a>
+                        <a href="#projects">
+                            <h3>Projects</h3>
+                        </a>
+                        <a href="#skills">
+                            <h3>Skills</h3>
+                        </a>
+                        <a href="#contact">
+                            <h3>Contact</h3>
+                        </a>
+                    </div>
+                  </div>
+        </nav>
+        <nav class ="desktop">
+            <button data-link="#about">
+                About
+            </button>
+            <button data-link="#projects">
+                Projects
+            </button>
+            <button data-link="#contact">
+                Contact
+            </button>
         </nav>
        
             <h1 class = "title">Just a computer guy</h1>
@@ -31,7 +49,7 @@
   
         
         <div id="about">
-            <h1>About Me</h1>
+            <h1>About</h1>
             <p>
                 I'm an 18 year old web developer from Seattle, currently based out of 
                 San Antonio, Texas. I strive for a modern sophisticated ui/ux while making
@@ -39,22 +57,38 @@
                 And another one here. I felt this block needed more text. I was right.
                 
             </p>
-        </div>
-        
-        <div id="skills">
-       
             <div>
-                <ul>
-                    <li data-aos="fade-right" data-aos-delay="500">HTML</li>
-                    <li data-aos="fade-left" data-aos-delay="700">CSS</li>
-                    <li data-aos="fade-right" data-aos-delay="1100">Javascript</li>
-                    <li data-aos="fade-left" data-aos-delay="1500">JQuery</li>
-                    <li data-aos="fade-right" data-aos-delay="1800">Slick</li>
-                    <li data-aos="fade-left" data-aos-delay="2100">Git</li>
-                    <li data-aos="fade-up" data-aos-delay="2400">Always learning more</li>
-                </ul>
+                <div id="skills">
+                    <div>
+                        <ul>
+                            <li data-aos="fade-right" data-aos-delay="500">HTML</li>
+                            <li data-aos="fade-left" data-aos-delay="600">CSS</li>
+                            <li data-aos="fade-right" data-aos-delay="700">Javascript</li>
+                            <li data-aos="fade-left" data-aos-delay="800">JQuery</li>
+                            <li data-aos="fade-right" data-aos-delay="900">Slick</li>
+                            <li data-aos="fade-left" data-aos-delay="1000">Git</li>
+                            <li data-aos="fade-up" data-aos-delay="1100">Always learning more</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="icons">
+                    <div class ="icon" data-aos="fade-right" data-aos-delay="1200">
+                        <img src="images/T-lp.png">
+                        <h3>Responsive websites to fit any screen size</h3>
+                    </div>
+                    <div class ="icon" data-aos="fade-right" data-aos-delay="1250">
+                        <img src="images/T-pb.png">
+                        <h3>Comfortable and beautiful UI/UX</h3>
+                    </div>
+                    <div class ="icon" data-aos="fade-right" data-aos-delay="1300">
+                        <img src="images/T-rs.png">
+                        <h3>Fast load times</h3>
+                    </div>
+                </div>
             </div>
         </div>
+        
+
         <div id="projects">
             <h1>Previous projects</h1>
             <div>
@@ -114,12 +148,10 @@
         </div>
         <footer>
             <h4>A website</h4>
-
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/alertify.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
         <script src="indexScript.JS"></script>
+
     </body>
 </html>

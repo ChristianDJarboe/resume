@@ -3,10 +3,17 @@
     src: url("fonts/walkWay.ttf");
     }
 #fancyBox{
+    position: relative;
     top:0;
     background-color:rgb(20, 27, 34);
-}
+    z-index:1;
 
+}
+#secondFancyBox{
+    position: absolute;
+    top:1000px;
+    z-index: -1;
+}
 body{
     margin:0;
     background-color:rgb(36, 44, 54)
@@ -15,6 +22,7 @@ body>div{
     width:100%;
     margin:0 auto;
     background-color:rgb(36, 44, 54);
+   
 }
 h1{
     width:60%;
@@ -27,16 +35,21 @@ h1{
 }
 
 .title{
-    left:400px;
-    top:300px; 
+  
     font-size:3.5em;
-    position: absolute;
+    position: relative;
+    top:-600px;
     width:510px;    
     transition: left ease-in-out .3s;
-
+    margin: 0 auto;
+    z-index:1;
    }
 /*---Navigation bar---*/
-nav{
+nav.mobile{
+    visibility: hidden;
+    position: absolute;
+}
+nav.desktop{
     display:flex;
     justify-content: flex-end;
     z-index: 1;
@@ -45,24 +58,31 @@ nav{
     background-color:rgb(61, 54, 75);
 
 }
-    a{
+    button{
         color: rgb(255, 255, 255);
         text-decoration: none;
         transition: background-color ease-in-out .3s;
-        width:7%;
+        width:8%;
         text-align: center;
         font-family: "walkWay";
         transition: width ease-in-out .3s;
+        background-color:rgb(61, 54, 75);
+        font-size:25px;
+        border:none;
+        padding:13px;
     }
-        nav>a:hover{
+        nav.desktop>button:hover{
             background-color:rgba(27, 44, 58, 0.514);
         }
 
 /*---About---*/
 
 #about{
-
 padding-top:10px;
+display:flex;
+flex-direction: column;
+align-items: center;
+height:1000px;
 }
 #about>h1{font-size:2.5em;}
 #about>p{
@@ -97,7 +117,27 @@ li:nth-of-type(7){
   color:rgb(2, 162, 255);
     
 }
+#about>div{
+    display:flex;
+    flex-direction: row-reverse;
+}
+#icons{
+
+}
+.icon{
+    display:flex;
+    color:white;
+    font-family: "walkWay";
+    font-size:20px;
+}
+.icon>img{
+    height:120px;
+}
 /*---Projects---*/
+#projects{
+
+    height:1000px;
+}
 #projects>div{
     display:flex;
     justify-content: center;
@@ -136,6 +176,7 @@ opacity: 1;
 #contact{
     margin-top:20px;
 width:60%;
+
 }
 #contact>h1{
     margin-bottom:5px;
@@ -150,6 +191,7 @@ margin-bottom:20px;
 padding-bottom:5px;
 }
 form{
+
 display:flex;
 flex-direction: column;
 align-items: center;
@@ -214,10 +256,6 @@ opacity: .8;
 a{
     width:9%;
 } 
-/*---Title---*/
-.title{
-    left:200px;
-} 
 #about>p{
     width:60%;
 }
@@ -250,6 +288,67 @@ a{
 }
 
 @media(max-width:1005px){
+    #fancyBox{
+        position: absolute;
+        z-index: 0;
+    }
+    .title{
+        top:300px;
+    }
+    #about{
+        margin-top:800px;
+    }
+/*-----------Navigation---------*/
+    /*Drop down menu*/
+    nav.mobile{
+        visibility: visible;
+        background-color:rgb(61, 54, 75);
+        position: sticky;
+        top:0px;
+        z-index: 1;
+       
+    }
+    .dropdown{
+       
+
+    }
+    .dropbtn {
+        background-color: rgb(117, 128, 136);
+        color: white;
+        padding: 16px;
+        font-size: 40px;
+        border: none;
+        cursor: pointer;
+      }
+      .dropbtn:hover, .dropbtn:focus {
+        background-color: #2980B9;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        left:5px;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {background-color: #ddd}
+      .show {display:block;}
+
+    nav.desktop{
+        visibility: hidden;
+    }
+
+    .title{
+        font-size:3em;
+    }
     a{
         width:12%;
     } 
