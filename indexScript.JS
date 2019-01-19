@@ -14,6 +14,7 @@ var dotArray = [];             //Where the particles will be stored
 var angle = .03;
 var centerPoint =[800,500];
 var mousePos =1;
+console.log(width);
 //End Variables
 
 /* When the user clicks on the button, 

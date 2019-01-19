@@ -175,7 +175,6 @@ width:60%;
 margin:0 auto;
 color:white;
 font-family: "walkWay";
-
 }
 #contact>h1{
     margin-top:15px;
@@ -245,181 +244,30 @@ footer>div>a>i{
     font-size:50px;
     color:white;
 }
+
+
+
 /*---Start of media Queries---*/
 
-@media(max-width:1330px){
-/*---Navigation bar---*/
-a{
-    width:9%;
-} 
-#about>p{
-    width:60%;
-}
+@media(max-width:1500px){
 
-/*---Projects*/
-.project >img{
-    width:340px;
 }
-.projectDiscription{
-    width:340px;
-}
-}
-@media(max-width:1187px){#about>p{width:65%;}}
-
-@media(max-width:1133px){
-
-/*---About---*/
-#about>p{
-    width:80%;
-}
-/*---Projects*/
-.project >img{
-    width:300px;
-}
-.projectDiscription{
-   width:300px;
-    font-size:1.2em;
-    left:10px;
-    }
-}
-
-@media(max-width:1005px){
-    #fancyBox{
-        position: absolute;
-        z-index: 0;
-    }
-    .title{
-        top:300px;
-    }
-    #about{
-        margin-top:800px;
-    }
-/*-----------Navigation---------*/
-    /*Drop down menu*/
-    nav.mobile{
-        visibility: visible;
-        background-color:rgb(61, 54, 75);
-        position: sticky;
-        top:0px;
-        z-index: 1;
-       
-    }
-    .dropdown{
-       
-
-    }
-    .dropbtn {
-        background-color: rgb(117, 128, 136);
-        color: white;
-        padding: 16px;
-        font-size: 40px;
-        border: none;
-        cursor: pointer;
-      }
-      .dropbtn:hover, .dropbtn:focus {
-        background-color: #2980B9;
-      }
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        left:5px;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-      }
-      .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-      .dropdown-content a:hover {background-color: #ddd}
-      .show {display:block;}
-
-    nav.desktop{
-        visibility: hidden;
-    }
-
-    .title{
-        font-size:3em;
-    }
-    a{
-        width:12%;
-    } 
-
-    /*---Projects---*/
-
-
-#projects>div{
-    display:grid;
-    grid-auto-rows: 50%,50%;
-    grid-template-columns: 50%, 50%;
-    grid-template-areas: "one two"
-                        "three three";
-}
-.project:nth-of-type(3){
-    width:400px;
-    margin-left:200px;
-    margin-top:20px;
-}
-.project:hover > img{
-    margin-bottom:15px;
-}
-.project >img{
-    width:400px;
-}
-.projectDiscription{
-    width:400px;
-    font-size:1.5em;
-}
-
-
-
-#instagramGallery{
-    display:grid;
-    grid-template-rows: 26% 33% 30% ;
-    grid-template-columns: 33% 33% 33%;
-    row-gap: 20px;
-    column-gap: 4px;
-    width:90%;
-    margin:0 auto;
-}
-.igPhoto>img{
-    width:100%;
-    transition: opacity .3s ease-in-out;
-}
-.igPhoto>img:hover{
-opacity: .8;
-}
-}
-
-@media(max-width:913px){
-.title{
-    left:20px;
-}
-
-.project:nth-of-type(3){
-    width:300px;
-    margin-left:25%;
-    margin-top:20px;
-}
-.project:hover > img{
-    margin-bottom:15px;
-}
-.project >img{
-    width:300px;
-}
-.projectDiscription{
-    width:300px;
-    font-size:1.2em;
-}
+@media(max-width:1300px){
 
 }
 
-@media(max-width:707px){
-    nav{
-        visibility: hidden;
-    }
+@media(max-width:1100px){
+
+}
+
+@media(max-width:900px){
+
+}
+
+@media(max-width:700px){
+
+}
+
+@media(max-width:500px){
+
 }
