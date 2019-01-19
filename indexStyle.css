@@ -2,28 +2,6 @@
     font-family: "walkWay";
     src: url("fonts/walkWay.ttf");
     }
-#fancyBox{
-    position: relative;
-    top:0;
-    background-color:rgb(20, 27, 34);
-    z-index:1;
-
-}
-#secondFancyBox{
-    position: absolute;
-    top:1000px;
-    z-index: -1;
-}
-body{
-    margin:0;
-    background-color:rgb(36, 44, 54)
-}
-body>div{
-    width:100%;
-    margin:0 auto;
-    background-color:rgb(36, 44, 54);
-   
-}
 h1{
     width:60%;
     text-align: center;
@@ -32,18 +10,26 @@ h1{
     padding-bottom:10px;
     font-family: "walkWay";
     color:white;
+    font-size:2.5em;
 }
-
+body{
+    margin:0;
+    background-color:rgb(36, 44, 54)
+}
+#fancyBox{
+    position: relative;
+    top:0;
+    background-color:rgb(20, 27, 34);
+}
+#secondFancyBox{
+    position: absolute;
+    top:1000px;
+}
 .title{
-  
     font-size:3.5em;
     position: relative;
-    top:-600px;
-    width:510px;    
-    transition: left ease-in-out .3s;
-    margin: 0 auto;
-    z-index:1;
-   }
+    top:-600px;   
+}
 /*---Navigation bar---*/
 nav.mobile{
     visibility: hidden;
@@ -52,20 +38,18 @@ nav.mobile{
 nav.desktop{
     display:flex;
     justify-content: flex-end;
-    z-index: 1;
     position:sticky;
     top:0px;
     background-color:rgb(61, 54, 75);
-
+    z-index:2;
 }
     button{
-        color: rgb(255, 255, 255);
+        color: white;
         text-decoration: none;
-        transition: background-color ease-in-out .3s;
+        transition: background-color ease-in-out .3s,
+                    width ease-in-out .3s;
         width:8%;
-        text-align: center;
         font-family: "walkWay";
-        transition: width ease-in-out .3s;
         background-color:rgb(61, 54, 75);
         font-size:25px;
         border:none;
@@ -74,31 +58,30 @@ nav.desktop{
         nav.desktop>button:hover{
             background-color:rgba(27, 44, 58, 0.514);
         }
-
 /*---About---*/
-
 #about{
+color:white;
+font-family: 'walkWay';
 padding-top:10px;
 display:flex;
 flex-direction: column;
 align-items: center;
 height:1000px;
+background-color:rgb(36, 44, 54);
 }
-#about>h1{font-size:2.5em;}
 #about>p{
-    font-family:sans-serif;
-    color:white;
     width:55%;
-    margin:0 auto;
-    padding:10px;
     font-size:1.6em;
-    font-family: "walkWay";
     text-align: center;
-    margin-bottom:10px;
+}
+#about>div{
+    border-top:10px solid rgb(128, 95, 155);
+    margin-top:50px;
+    padding-top:50px;
+    display:flex;
+    flex-direction: row-reverse;
 }
 #skills{
-margin-bottom:100px;
-
 width:600px;
 }
 ul{
@@ -109,38 +92,41 @@ ul{
 }
 li{
     text-align: center;
-    color:white;
-    font-family: "walkWay";
     font-size:2em;
 }
 li:nth-of-type(7){
   color:rgb(2, 162, 255);
-    
 }
-#about>div{
-    display:flex;
-    flex-direction: row-reverse;
-}
-#icons{
-
+#profile>img{
+    height:300px;
+    border-radius: 50%;
+    border:2px solid rgb(255, 255, 255);
 }
 .icon{
     display:flex;
-    color:white;
-    font-family: "walkWay";
     font-size:20px;
+    align-items: center;
 }
 .icon>img{
     height:120px;
 }
 /*---Projects---*/
 #projects{
-
     height:1000px;
+    background-color:rgb(41, 51, 63);
+    padding-top:10px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    color:white;
+    font-family: "walkWay";
 }
 #projects>div{
     display:flex;
     justify-content: center;
+}
+#projects>div:nth-of-type(1){
+    padding-bottom:25px;
 }
 .project{
     margin:5px;
@@ -150,14 +136,14 @@ li:nth-of-type(7){
 .project:hover > img{
     opacity: .3;
     transform:scale(1.2);
-    margin-left:33px;
-    margin-right:33px;
+    margin-left:50px;
+    margin-right:50px;
 }
 .project:hover > .projectDiscription{
 opacity: 1;
 }
 .project >img{
-    width:400px;
+    width:550px;
     transition: opacity ease-in-out .4s,
                 transform ease-in-out .4s,
                 margin ease-in-out .4s,
@@ -166,24 +152,37 @@ opacity: 1;
 .projectDiscription{
     width:400px;
     font-size:1.5em;
-    color:white;
     opacity: 0;
     position: absolute;
     transition:opacity ease-in-out .4s
                 width ease-in-out .4s;
 }
+.projectDiscription>a{
+    color:white;
+    text-decoration: none;
+}
+#projP{
+    font-size:25px;
+    height: 300px;
+    width:700px;
+    display:flex;
+    flex-direction: column;
+}
 /*---Contact---*/
 #contact{
-    margin-top:20px;
+height:800px;
 width:60%;
+margin:0 auto;
+color:white;
+font-family: "walkWay";
 
 }
 #contact>h1{
+    margin-top:15px;
     margin-bottom:5px;
 }
 #contact>h2{
-color:white;
-font-family: "walkWay";
+
 text-align: center;
 width:400px;
 margin:0 auto;
@@ -191,64 +190,61 @@ margin-bottom:20px;
 padding-bottom:5px;
 }
 form{
-
+position: relative;
+z-index: 1;
 display:flex;
 flex-direction: column;
 align-items: center;
 }
 textarea{
     resize:none;
-    background-color:rgb(61, 54, 75);
+    background-color:rgb(29, 36, 46);
     color:white;
+    width:700px;
+    border:none;
 }
 [type=email]{
-    width:400px;
+    width:700px;
     margin-bottom:20px;
+    background-color:rgb(29, 36, 46);
+    border:none;
+    height:30px;
+    color:white;
 }
 [type=submit]{
-    background-color:rgb(255, 255, 255);
-    color:black;
+    background-color:rgb(29, 36, 46);
+    color:white;
     border:none;
-    width:60px;
+    width:700px;
     height:30px;
     margin-top:5px;
 }
-footer{
-    margin-top:50px;
+#contact>p{
+font-size: 25px;
+text-align:center;
 }
-footer>h4{
-    color:white;
-    width:100px;
-    text-align: center;
-    margin:0 auto;
-}
-/*----InstagramGallery-----*/
-#instagramHeader{
-    width:400px;
-    margin:0 auto;
-    margin-top:30px;
-    text-align: center;
-    border-bottom: 1px solid rgb(201, 148, 174);
-    margin-bottom:20px;
-}
-
-#instagramGallery{
-    display:grid;
-    grid-template-rows: 26% 33% 30% ;
-    grid-template-columns: 33% 33% 33%;
-    row-gap: 20px;
-    column-gap: 4px;
-    width:950px;
-    margin:0 auto;
-}
-.igPhoto>img{
+ /*------------Footer--------------*/
+ footer{
+    position: relative;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
     width:100%;
-    transition: opacity .3s ease-in-out;
+    height:70px;
+    padding-top:3px;
+    padding-bottom:3px;
+    background-color:rgb(77, 61, 83);
+    z-index:1;
 }
-.igPhoto>img:hover{
-opacity: .8;
+footer >div{
+margin-top:3px;
 }
-
+footer>div>a>i{
+    width:40px;
+    margin-left:20px;
+    font-size:50px;
+    color:white;
+}
 /*---Start of media Queries---*/
 
 @media(max-width:1330px){

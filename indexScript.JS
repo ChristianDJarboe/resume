@@ -134,44 +134,17 @@ window.setInterval(function(){
   }, 10);
 
 
-//Instagram api
-
-
-var x=false;
-  var token = '2174196449.1677ed0.850e074c1b9647ec9d3ffc67ec475f3b',
-  num_photos=9;    
-        
-  $.ajax({
-      
-      url: 'https://api.instagram.com/v1/users/self/media/recent',
-      dataType: 'jsonp',
-      type: 'GET',
-      data: {access_token: token, count: num_photos},
-      success: function(data){
-          console.log(data);
-          for( x in data.data ){
-              $('#instagramGallery').append('<div class="igPhoto"><img src="'+data.data[x].images.low_resolution.url+'"></div>');
-          }
-      },
-      error: function(data){
-          console.log(data);
-          console.log("error");
-      }
-  });
-  
-
-
 //-----------------------------------------------------------------------------
 //-----------------------------------------------------------------------------
 //---------------------------SECOND CANVAS-------------------------------------
 //-----------------------------------------------------------------------------
 //-----------------------------------------------------------------------------
 //Variables
-var height2=document.body.scrollHeight;
+var height2=document.body.scrollHeight - window.innerHeight;
 var width2=  window.innerWidth;   
 var canvas2 = document.getElementById("secondFancyBox");   //Declares canvas
 canvas2.width = width2-20;               //sets width
-canvas2.height = document.body.scrollHeight;                 //sets height
+canvas2.height = document.body.scrollHeight -window.innerHeight-0;                 //sets height
 var ctx2 = canvas2.getContext("2d");                  //get context
 ctx2.fillStyle = 'rgba(255, 165, 0, 1)';                    //set color
 var pointCount =30;               //particle count

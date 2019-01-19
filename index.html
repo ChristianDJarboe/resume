@@ -4,7 +4,7 @@
         <title>CJ</title>
         <link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.2/build/css/alertify.min.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <link rel="stylesheet" href="indexStyle.css">
     </head>
     <body>
@@ -33,6 +33,9 @@
                   </div>
         </nav>
         <nav class ="desktop">
+            <button data-link="#fancyBox">
+                <i class="fas fa-chevron-up"></i>
+            </button>
             <button data-link="#about">
                 About
             </button>
@@ -55,7 +58,6 @@
                 San Antonio, Texas. I strive for a modern sophisticated ui/ux while making
                 a webpage dynamic and interesting. Imagine I wrote another sentence here. 
                 And another one here. I felt this block needed more text. I was right.
-                
             </p>
             <div>
                 <div id="skills">
@@ -71,16 +73,20 @@
                         </ul>
                     </div>
                 </div>
+                <div id="profile" data-aos="fade-up" data-aos-delay="1200">
+                    <img src="images/me.jpg" >
+                    <h2>Look at that handsome devil</h2>
+                </div>
                 <div id="icons">
-                    <div class ="icon" data-aos="fade-right" data-aos-delay="1200">
+                    <div class ="icon" data-aos="fade-right" data-aos-delay="600">
                         <img src="images/T-lp.png">
                         <h3>Responsive websites to fit any screen size</h3>
                     </div>
-                    <div class ="icon" data-aos="fade-right" data-aos-delay="1250">
+                    <div class ="icon" data-aos="fade-right" data-aos-delay="800">
                         <img src="images/T-pb.png">
                         <h3>Comfortable and beautiful UI/UX</h3>
                     </div>
-                    <div class ="icon" data-aos="fade-right" data-aos-delay="1300">
+                    <div class ="icon" data-aos="fade-right" data-aos-delay="1000">
                         <img src="images/T-rs.png">
                         <h3>Fast load times</h3>
                     </div>
@@ -124,31 +130,46 @@
                     </div>
                 </div>
             </div>
+       
+            <div id="projP">
+                <p>
+                    These are some of my projects I made either for class at The Austin Coding Academy
+                    or to keep myself sharp and improve my skills. Feel free to check them out!
+                    Hover and click visit<br>
+                </p>
+                <p>More projects coming soon (Maybe even yours)</p>
+
+            </div>
         </div>
         <div id="contact">
                     <h1>Like what you see?</h1>
-                    <h2>Lets work together</h2>
+                    <h2>Lets communicate </h2>
             <form action="https://formspree.io/christianDjarboe@gmail.com" method="POST">
                 <input type="email" name="_replyto" placeholder="Email">
                 <textarea name="name" cols =80 rows = 15 placeholder="Message"></textarea>
                 <input type="submit" value="Send" onclick="alert('Message sent successfully')">
                 <input type="hidden" name="_next" value="index.html" />
-              </form>
-            
-
-        </div>
-        <h1 id="instagramHeader">Follow me on Instagram!</h1>
-        <div id="instagramGallery">
-           
-            <!--Contains instgram photos under.
-            Inserted as:
-            <div class="igPhoto">
-                <img src="'+data.data[x].images.low_resolution.url+'">
-            </div>-->
+            </form>
+            <p>
+                I'll get back to you as soon as I can
+            </p>
         </div>
         <footer>
-            <h4>A website</h4>
+
+            <div>
+                <a href="https://www.instagram.com/rover_blvd/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/ChristianDJarboe">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.twitch.tv/seajay_live">
+                    <i class="fab fa-twitch"></i>
+                </a>
+               
+            </div>
         </footer>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="indexScript.JS"></script>
