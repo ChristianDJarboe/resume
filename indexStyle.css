@@ -14,7 +14,7 @@ h1{
 }
 body{
     margin:0;
-    background-color:rgb(36, 44, 54)
+    background-color:rgb(36, 44, 54);
 }
 #fancyBox{
     position: relative;
@@ -324,45 +324,7 @@ top:300px;
 #fancyBox{
     position: absolute;
 }
-nav.mobile{
-    visibility: visible;
-    background-color:rgb(61, 54, 75);
-    position: sticky;
-    top:0px;
-    z-index: 1;
-}
-.dropbtn {
-    background-color: rgb(117, 128, 136);
-    color: white;
-    padding: 16px;
-    font-size: 40px;
-    border: none;
-    cursor: pointer;
-}
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    left:5px;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 2;
-}
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-.dropdown-content a:hover {background-color: #ddd}
-.show {display:block;
-}
-nav.desktop{
-    visibility: hidden;
-}
+
 
 /*---About---*/
 #about{
@@ -375,7 +337,9 @@ height:1120px;
     grid-template-areas: "three one"
                          "two two";
 }
-
+#about>p{
+    width:85%;
+}
 ul{
     width:40%;
     margin:0 auto;
@@ -463,12 +427,50 @@ textarea{
 }
 }
 
-@media(max-width:900px){
+@media(max-width:920px){
 
 }
 
 @media(max-width:700px){
-
+    nav.mobile{
+        visibility: visible;
+        background-color:rgb(61, 54, 75);
+        position: sticky;
+        top:0px;
+        z-index: 1;
+    }
+    .dropbtn {
+        background-color: rgb(117, 128, 136);
+        color: white;
+        padding: 16px;
+        font-size: 40px;
+        border: none;
+        cursor: pointer;
+    }
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: #2980B9;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        left:5px;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 2;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover {background-color: #ddd}
+    .show {display:block;
+    }
+    nav.desktop{
+        visibility: hidden;
+    }
 }
 
 @media(max-width:550px){
@@ -492,6 +494,9 @@ textarea{
     }
     #about{
         height:1500px;
+    }
+    #about>p{
+        width:95%;
     }
     #profile{
         width:500px;

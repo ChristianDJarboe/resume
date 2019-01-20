@@ -1,51 +1,11 @@
-media queries
-/*Drop down menu*/
-nav.mobile{
-    visibility: visible;
-    background-color:rgb(61, 54, 75);
-    position: sticky;
-    top:0px;
-    z-index: 1;
-}
-.dropbtn {
-    background-color: rgb(117, 128, 136);
-    color: white;
-    padding: 16px;
-    font-size: 40px;
-    border: none;
-    cursor: pointer;
-}
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    left:5px;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-.dropdown-content a:hover {background-color: #ddd}
-.show {display:block;
-}
-nav.desktop{
-    visibility: hidden;
-}
-
-laptop : 1536
-
-
-Bigger nav menu button, move to right side.
-more spacing between divider and about.
-make contact fields bigger
-
--3,0 5,8
-
+Fix menu color and position
+fix about paragraph width
+center skills
+make icons font a little smaller
+center profile img
+make about a little taller
+fix project discription position and make font smaller
+make project paragraph smaller
+fix projects height
+page is long on bottom
+email authentication on the email api
