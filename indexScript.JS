@@ -7,7 +7,8 @@ var height = window.innerHeight;
 var width =  window.innerWidth;   
 var canvas = document.getElementById("fancyBox");   //Declares canvas
 var ctx = canvas.getContext("2d");                  //get context
-var dotCount =50;                                   //dot count
+var dotCount =50; 
+if(width<=700){dotCount=15;}                                  //dot count
 var dotArray = [];                                  //Where the particles will be stored
 var angle = .03;                                    //rotation speed
 var centerPoint =[800,500];                         //rotates around
@@ -162,15 +163,19 @@ function updateWidth(){
 //Updates height to prevent weird resizeing issues when not in full screen desktop mode
 function updateHeight(){
     if(width<=1180){
-        divider.style.marginTop=canvas.height-100+"px";
+        divider.style.marginTop=canvas.height-20+"px";
     }else{
         divider.style.marginTop="0px";
     }
     if(width<=862){
-        divider.style.marginTop=canvas.height-155+"px";
+        divider.style.marginTop=canvas.height-20+"px";
+    }
+    if(width<=700){
+        divider.style.marginTop=canvas.height-105+"px";
+
     }
     if(width<=579){
-        divider.style.marginTop=window.innerHeight-200+"px";
+        divider.style.marginTop=window.innerHeight-160+"px";
     }
     canvas.height= window.innerHeight-60;
     title.style.top=canvas.height/2 +"px";

@@ -2,6 +2,10 @@
     font-family: "walkWay";
     src: url("fonts/walkWay.ttf");
     }
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
 h1{
     width:60%;
     text-align: center;
@@ -54,7 +58,7 @@ nav.desktop{
         font-size:25px;
         border:none;
         padding:13px;
-        transition: margin ease-in-out .4s;
+        transition: width ease-in-out .4s;
     }
         nav.desktop>button:hover{
             background-color:rgba(27, 44, 58, 0.514);
@@ -86,8 +90,8 @@ background-color:rgb(36, 44, 54);
 width:600px;
 }
 ul{
-    width:40%;
-    margin:0 auto;
+ 
+   
     list-style-type: none;
     padding:0;
 }
@@ -286,7 +290,7 @@ footer>div>a>i{
 }
 @media(max-width:1350px){
     nav.desktop>button{
-        margin-left:20px;
+        width:10%;
     }
 #projects>div:nth-of-type(1){
     display:grid;
@@ -310,8 +314,11 @@ footer>div>a>i{
 
 }
 }
-/*Start of mobile view*/
+
 @media(max-width:1180px){
+nav.desktop>button{
+    width:15%;
+}
 /*Drop down menu*/
 #title{
 top:300px;
@@ -341,15 +348,12 @@ height:1120px;
     width:85%;
 }
 ul{
-    width:40%;
+    
     margin:0 auto;
     list-style-type: none;
-    padding:0;
+    padding:10px;
 }
-li{
-    text-align: center;
-    font-size:2em;
-}
+
 li:nth-of-type(7){
   color:rgb(2, 162, 255);
 }
@@ -363,9 +367,13 @@ li:nth-of-type(7){
     border-radius: 50%;
     border:2px solid rgb(255, 255, 255);
 }
+#skills{
+
+    width:100%;
+}
 #icons{
-  
-    margin-left:20%;
+
+ 
 }
 .icon{
     display:flex;
@@ -430,7 +438,7 @@ textarea{
 @media(max-width:920px){
 
 }
-
+/*Start of mobile view*/
 @media(max-width:700px){
     nav.mobile{
         visibility: visible;
@@ -440,57 +448,53 @@ textarea{
         z-index: 1;
     }
     .dropbtn {
-        background-color: rgb(117, 128, 136);
+       
         color: white;
         padding: 16px;
         font-size: 40px;
         border: none;
         cursor: pointer;
+        margin-left:20px;
+        width:70px;
     }
     .dropbtn:hover, .dropbtn:focus {
         background-color: #2980B9;
     }
     .dropdown-content {
+
         display: none;
         position: absolute;
         left:5px;
-        background-color: #f1f1f1;
+    
         min-width: 160px;
+        width:100%;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 2;
     }
-    .dropdown-content a {
-        color: black;
+    .dropdown-content button {
+        background-color:rgba(61, 54, 75, 0.884);
+        font-family: "walkWay";
+        color:white;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
+        text-align: center;
+        width:100%;
     }
-    .dropdown-content a:hover {background-color: #ddd}
+    .dropdown-content button:hover {background-color: rgb(56, 50, 55)}
     .show {display:block;
     }
     nav.desktop{
         visibility: hidden;
     }
-}
-
-@media(max-width:550px){
-    #secondFancyBox{
-        top:1800px;
-       
-    }
-    #divider{
-    
-    }
     #about>p{
-        width:100%;
-        padding:20px;
+        width:85%;
     }
     #about>div{
         width:100%;
         grid-template-areas: "one"
                              "three"
                              "two"; 
-        max-width: 500px;
     }
     #about{
         height:1500px;
@@ -499,20 +503,19 @@ textarea{
         width:95%;
     }
     #profile{
-        width:500px;
+        width:100%;
         margin:0px;}
     #skills{
-        width:500px;
-        margin:0px;
+        width:100%;
+        margin:0 auto;
+    }
+    ul{
+
     }
     #icons{
-        width:400px;
+        width:100%;
         margin:0px;
     }
-    #projP{
-        width:100%;
-    }
 }
-@media(max-width:550px){
 
-}
+
