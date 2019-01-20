@@ -1,7 +1,7 @@
 'use strict'
 AOS.init();
 //Variables
-var height=document.body.scrollHeight;
+var height=window.innerHeight;
 var width=  window.innerWidth;   
 var canvas = document.getElementById("fancyBox");   //Declares canvas
 canvas.width = width-17;               //sets width
@@ -16,15 +16,24 @@ var centerPoint =[800,500];
 var mousePos =1;
 console.log(width);
 //End Variables
-var all = document.getElementsByTagName("*");
-function allwidths(){
-  
-    console.log(all[1]);
-for (var i=0; i<all.length; i++) {
-    console.log(all[i].offsetWidth +" "+ all[i].tagName);
+
+
+var b = document.getElementById("divider");
+function fixHeight(){
+
+    console.log(canvas.height+" "+canvas.width);
+    if(width<=1180){
+        b.style.marginTop=canvas.height-210+"px";
+    }else{
+        b.style.marginTop="0px";
+    }
+    if(width<=862){
+        b.style.marginTop=canvas.height-265+"px";
+    }
+    if(width<=579){
+        b.style.marginTop=canvas.height-325+"px";
+    }
 }
-}
-allwidths();
 
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -129,7 +138,7 @@ function updateWidth(){
     if(width<=700){
         centerPoint= [250, 400];
     }      
-       
+    fixHeight();
 }
 function removeAttb(){
     let x = document.getElementsByClassName("project");

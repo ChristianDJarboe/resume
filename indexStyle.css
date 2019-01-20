@@ -319,7 +319,6 @@ top:300px;
 #divider{
     width:100%;
     height:20px;
-    margin-top:680px;
 }
 #fancyBox{
     position: absolute;
@@ -399,9 +398,6 @@ li:nth-of-type(7){
     border-radius: 50%;
     border:2px solid rgb(255, 255, 255);
 }
-#skills{
- 
-}
 #icons{
   
     margin-left:20%;
@@ -480,7 +476,7 @@ textarea{
        
     }
     #divider{
-        margin-top:1400px;
+    
     }
     #about>p{
         width:100%;
@@ -510,4 +506,7 @@ textarea{
     #projP{
         width:100%;
     }
+}
+@media(max-width:550px){
+
 }
