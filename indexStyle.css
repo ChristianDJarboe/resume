@@ -474,6 +474,40 @@ textarea{
 
 }
 
-@media(max-width:500px){
-
+@media(max-width:550px){
+    #secondFancyBox{
+        top:1800px;
+       
+    }
+    #divider{
+        margin-top:1400px;
+    }
+    #about>p{
+        width:100%;
+        padding:20px;
+    }
+    #about>div{
+        width:100%;
+        grid-template-areas: "one"
+                             "three"
+                             "two"; 
+        max-width: 500px;
+    }
+    #about{
+        height:1500px;
+    }
+    #profile{
+        width:500px;
+        margin:0px;}
+    #skills{
+        width:500px;
+        margin:0px;
+    }
+    #icons{
+        width:400px;
+        margin:0px;
+    }
+    #projP{
+        width:100%;
+    }
 }

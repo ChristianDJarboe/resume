@@ -16,6 +16,15 @@ var centerPoint =[800,500];
 var mousePos =1;
 console.log(width);
 //End Variables
+var all = document.getElementsByTagName("*");
+function allwidths(){
+  
+    console.log(all[1]);
+for (var i=0; i<all.length; i++) {
+    console.log(all[i].offsetWidth +" "+ all[i].tagName);
+}
+}
+allwidths();
 
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -115,6 +124,7 @@ function updateWidth(){
     ctx.fillStyle = "#228df1";     //update color?      
     if(width<=1180){
         removeAttb();
+        
     }      
        
 }
