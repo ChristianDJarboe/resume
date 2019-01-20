@@ -14,25 +14,30 @@ var dotArray = [];             //Where the particles will be stored
 var angle = .03;
 var centerPoint =[800,500];
 var mousePos =1;
-console.log(width);
 //End Variables
 
 
 var b = document.getElementById("divider");
+var c = document.getElementById("title");
 function fixHeight(){
 
-    console.log(canvas.height+" "+canvas.width);
     if(width<=1180){
-        b.style.marginTop=canvas.height-210+"px";
+        b.style.marginTop=canvas.height-100+"px";
     }else{
         b.style.marginTop="0px";
     }
     if(width<=862){
-        b.style.marginTop=canvas.height-265+"px";
+        b.style.marginTop=canvas.height-155+"px";
     }
     if(width<=579){
-        b.style.marginTop=canvas.height-325+"px";
+        b.style.marginTop=window.innerHeight-200+"px";
     }
+    canvas.height= window.innerHeight-60;
+    c.style.top=canvas.height/2 +"px";
+    c.style.left=canvas.width/2 -canvas.width/4+"px";
+    console.log(c.style.width+"px");
+    console.log(canvas.height +" "+ b.style.marginTop);
+    
 }
 
 /* When the user clicks on the button, 
