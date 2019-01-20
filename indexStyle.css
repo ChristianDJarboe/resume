@@ -170,7 +170,7 @@ opacity: 1;
 #projP{
     font-size:25px;
     height: 300px;
-    width:700px;
+    width:70%;
     display:flex;
     flex-direction: column;
 }
@@ -326,7 +326,6 @@ top:300px;
 #divider{
     width:100%;
     height:20px;
-    background-color:red;
 }
 #fancyBox{
     position: absolute;
@@ -387,7 +386,7 @@ li:nth-of-type(7){
 /*Projects*/
 
 #projects{
-    height:1900px;
+    height:100%;
     width:100%;
 }
 #projects>div:nth-of-type(1){
@@ -411,9 +410,12 @@ li:nth-of-type(7){
 #projP{
     font-size:25px;
     height: 200px;
-    width:700px;
+
     display:flex;
     flex-direction: column;
+}
+.projectDiscription{
+    margin-left:10%;
 }
 /*---Contact---*/
 #contact{
@@ -443,12 +445,12 @@ textarea{
     nav.mobile{
         visibility: visible;
         background-color:rgb(61, 54, 75);
-        position: sticky;
+        position: fixed;
         top:0px;
         z-index: 1;
+        width:100%;
     }
     .dropbtn {
-       
         color: white;
         padding: 16px;
         font-size: 40px;
@@ -461,11 +463,9 @@ textarea{
         background-color: #2980B9;
     }
     .dropdown-content {
-
         display: none;
-        position: absolute;
+        position: relative;
         left:5px;
-    
         min-width: 160px;
         width:100%;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -516,6 +516,17 @@ textarea{
         width:100%;
         margin:0px;
     }
+    #projP{
+        margin-top:50px;
+    }
 }
-
-
+@media(max-width:550px){
+    #projP{
+        margin-bottom:20px;
+    }
+}
+@media(max-width:500px){
+    .projectDiscription{
+        font-size:22px;
+    }
+}

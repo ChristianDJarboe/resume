@@ -167,16 +167,7 @@ function updateHeight(){
     }else{
         divider.style.marginTop="0px";
     }
-    if(width<=862){
-        divider.style.marginTop=canvas.height-20+"px";
-    }
-    if(width<=700){
-        divider.style.marginTop=canvas.height-105+"px";
-
-    }
-    if(width<=579){
-        divider.style.marginTop=window.innerHeight-160+"px";
-    }
+ 
     canvas.height= window.innerHeight-60;
     title.style.top=canvas.height/2 +"px";
     title.style.left=canvas.width/2 -canvas.width/4+"px";
