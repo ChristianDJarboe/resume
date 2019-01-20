@@ -113,10 +113,18 @@ function updateWidth(){
     width= window.innerWidth;
     canvas.width=width-20;
     ctx.fillStyle = "#228df1";     //update color?      
-    if(width<=1005){
-        canvas.height = window.innerHeight;  
-    }            
+    if(width<=1180){
+        removeAttb();
+    }      
+       
 }
+function removeAttb(){
+    let x = document.getElementsByClassName("project");
+    for(let j=0;j<x.length;j++){
+        x[j].removeAttribute("data-aos");
+    }
+}
+
 
 window.setInterval(function(){
     updateWidth();
