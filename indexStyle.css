@@ -54,6 +54,7 @@ nav.desktop{
         font-size:25px;
         border:none;
         padding:13px;
+        transition: margin ease-in-out .4s;
     }
         nav.desktop>button:hover{
             background-color:rgba(27, 44, 58, 0.514);
@@ -190,7 +191,7 @@ padding-bottom:5px;
 }
 form{
 position: relative;
-z-index: 1;
+z-index: 0;
 display:flex;
 flex-direction: column;
 align-items: center;
@@ -271,6 +272,9 @@ footer>div>a>i{
     }
 }
 @media(max-width:1587px){
+    nav.desktop>button:nth-of-type(4){
+        margin-right:20px;
+    }
     .project >img{
         width:400px;
     }
@@ -280,6 +284,9 @@ footer>div>a>i{
     }
 }
 @media(max-width:1350px){
+    nav.desktop>button{
+        margin-left:20px;
+    }
 #projects>div:nth-of-type(1){
     display:grid;
     grid-auto-rows: 50%,50%;
@@ -299,16 +306,119 @@ footer>div>a>i{
 }
 .project >img{
     width:500px;
-    transition: opacity ease-in-out .4s,
-                transform ease-in-out .4s,
-                margin ease-in-out .4s,
-                width ease-in-out .4s;
+
 }
+}
+/*Start of mobile view*/
+@media(max-width:1180px){
+/*Drop down menu*/
+.title{
+top:300px;
+}
+#divider{
+    width:100%;
+    height:20px;
+    margin-top:680px;
+}
+#fancyBox{
+    position: absolute;
+}
+nav.mobile{
+    visibility: visible;
+    background-color:rgb(61, 54, 75);
+    position: sticky;
+    top:0px;
+    z-index: 1;
+}
+.dropbtn {
+    background-color: rgb(117, 128, 136);
+    color: white;
+    padding: 16px;
+    font-size: 40px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left:5px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #ddd}
+.show {display:block;
+}
+nav.desktop{
+    visibility: hidden;
 }
 
-@media(max-width:1180px){
+/*---About---*/
+#about{
+height:1120px;
+}
+#about>div{
+    display:grid;
+    grid-template-rows: 50%,50%;
+    grid-template-areas: 50%,50%;
+    grid-template-areas: "three one"
+                         "two two";
+}
+
+ul{
+    width:40%;
+    margin:0 auto;
+    list-style-type: none;
+    padding:0;
+}
+li{
+    text-align: center;
+    font-size:2em;
+}
+li:nth-of-type(7){
+  color:rgb(2, 162, 255);
+}
+#profile{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+#profile>img{
+    width:300px;
+    border-radius: 50%;
+    border:2px solid rgb(255, 255, 255);
+}
+#skills{
+ 
+}
+#icons{
+  
+    margin-left:20%;
+}
+.icon{
+    display:flex;
+    font-size:20px;
+    align-items: center;
+}
+.icon>img{
+    height:120px;
+}
+
+/*Projects*/
+
 #projects{
-    height:1700px;
+    height:1900px;
+    width:100%;
 }
 #projects>div:nth-of-type(1){
     display:flex;
@@ -321,16 +431,12 @@ footer>div>a>i{
     flex-direction: column;
 }
 .project:hover > img{
-    margin:0px;
-    margin-bottom:45px;
-    margin-top:45px;
+    margin:0 auto;
+    transform: scale(1);
 }
 .project >img{
-    width:800px;
-    transition: opacity ease-in-out .4s,
-                transform ease-in-out .4s,
-                margin ease-in-out .4s,
-                width ease-in-out .4s;
+    width:90%;
+    margin:0 auto;
 }
 #projP{
     font-size:25px;
@@ -338,6 +444,24 @@ footer>div>a>i{
     width:700px;
     display:flex;
     flex-direction: column;
+}
+/*---Contact---*/
+#contact{
+width:100%;
+}
+textarea{
+    width:90%;
+    font-size:1.5em;
+}
+[type=email]{
+    font-size:1.5em;
+    width:90%;
+    height:50px;
+}
+[type=submit]{
+    width:90%;
+    height:50px;
+    font-size:2em;
 }
 }
 
