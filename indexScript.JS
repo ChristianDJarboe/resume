@@ -167,8 +167,12 @@ function updateHeight(){
     }else{
         divider.style.marginTop="0px";
     }
- 
-    canvas.height= window.innerHeight-60;
+    if(width<=700){
+        canvas.height = window.innerHeight;  
+    }else{
+        canvas.height= window.innerHeight-60;
+    }
+
     title.style.top=canvas.height/2 +"px";
     title.style.left=canvas.width/2 -canvas.width/4+"px";
 }

@@ -24,6 +24,7 @@ body{
     position: relative;
     top:0;
     background-color:rgb(20, 27, 34);
+    border-bottom:40px solid black;
 }
 #secondFancyBox{
     position: absolute;
