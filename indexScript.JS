@@ -65,10 +65,10 @@ $("button").click(function() {
 //------------------------------------------------------
 class dot{
     constructor(){
-        this.x = Math.random()*1920;
-    
+        this.x = Math.random()*width;
         this.y= Math.random()*height;
         this.color ="gray";
+
     }
     
 }
@@ -125,6 +125,9 @@ function updateWidth(){
     if(width<=1180){
         removeAttb();
         
+    }
+    if(width<=700){
+        centerPoint= [250, 400];
     }      
        
 }
