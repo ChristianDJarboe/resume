@@ -150,7 +150,7 @@ function drawLine(i){
 //updates thhe width of the canvases
 function updateWidth(){
     width= window.innerWidth;
-    canvas.width=width-20;
+    canvas.width=width;
     ctx.fillStyle = "#228df1";    
     ctx2.fillStyle = 'rgba(134, 140, 190,.4)';
     if(width<=1180){
