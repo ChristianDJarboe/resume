@@ -4,8 +4,10 @@
         <title>CJ</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
         <link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
+        <!--Imported-->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <!--Local-->
         <link rel="stylesheet" href="indexStyle.css">
     </head>
     <body>
@@ -146,11 +148,11 @@
         <div id="contact">
                     <h1>Like what you see?</h1>
                     <h2>Lets communicate </h2>
-            <form action="https://formspree.io/christianDjarboe@gmail.com" method="POST">
-                <input type="email" name="_replyto" placeholder="Email">
-                <textarea name="name" cols =80 rows = 15 placeholder="Message"></textarea>
-                <input type="submit" value="Send" onclick="alert('Message sent successfully')">
-                <input type="hidden" name="_next" value="index.html" />
+            <form id= "contact-form" action="https://formspree.io/christianDjarboe@gmail.com" method="POST">
+                <input id="email" type="email" name="_replyto" placeholder="Email">
+                <textarea id="message" name="Message" cols =80 rows = 15 placeholder="Message"></textarea>
+                <input type="submit" value="Send">
+                <input type="hidden" name="_next" value="https://christiandjarboe.github.io/resume/" />
             </form>
             <p>
                 I'll get back to you as soon as I can

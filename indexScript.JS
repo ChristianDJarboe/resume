@@ -82,6 +82,26 @@ for(let i=0;i<dotCount;i++){                        //create dots
     dotArray.push(new dot());
 }
 //---Functions
+$('#contact-form').submit(function(e){
+    let email = document.getElementById("email"),
+        message = document.getElementById("message");
+    if(!email.value|| !message.value){
+        e.preventDefault();
+        alert("Please check your input fields");
+    } else{
+        $.ajax({
+            url: "https://formspree.io/christianDjarboe@gmail.com",
+            method: "POST",
+            data: {
+                _replyto:email,
+                message:message
+            },
+            dataType: "json"
+          });
+        
+        alert("Messge sent successfully!");
+    }
+})
 //Gets mouse position for the recoloring effect on canvas one
 function getMousePos(canvas, evt){
     var rect = canvas.getBoundingClientRect();
